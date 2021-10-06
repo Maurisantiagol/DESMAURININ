@@ -1,0 +1,30 @@
+A A A
+const fs = require(*fs");
+
+O
+
+ 
+
+AA
+O A NA
+
+ 
+
+console.log(*El contenido del txt es:
+SON
+TA
+
+O SS
+SO
+
+console. Log(encriptar);
+console.log(**)
+
+ 
+
+O OE
+
+OSO)
+ROA
+TA
+

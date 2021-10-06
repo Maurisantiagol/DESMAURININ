@@ -1,0 +1,28 @@
+{
+  "name": "cifradodes",
+  "description": "Cifrado des con subida de archivos",
+  "version": "1.0.0",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "express": "^4.16.2",
+    "express-fileupload": "^1.2.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "request": "^2.88.2"
+  },
+  "main": "index.js",
+  "author": "Mauricio Marinin (Edgar)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maurisantiagol/DESMAURININ.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Maurisantiagol/DESMAURININ/issues"
+  },
+  "homepage": "https://github.com/Maurisantiagol/DESMAURININ#readme"
+}
