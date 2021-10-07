@@ -1,9 +1,13 @@
 let formulario = document.getElementById("formulario");
 
 function Cifrado(event){
-    nombrearchivo=document.getElementById('subir_archivo').files[0].name;
-    console.log(nombrearchivo);
+    
     formulario.setAttribute("action", "/cifrar");
+
+}
+function Decifrado(event){
+    
+    formulario.setAttribute("action", "/descifrar");
 
 }
 

@@ -37,9 +37,12 @@ app.listen(port, function () {
 
 module.exports = app; 
 app.post("/cifrar", (req, res) => {
-    let archivo, mensaje,nombrearchivo;
+    let archivo, mensaje;
+    let inputPassword;
+
   let Contenido = req.files.subir_archivo.name;
-  let inputPassword = req.body.Password;
+  inputPassword = req.body.Password;
+  
 
   archivo = __dirname + '/uploads/' +Contenido; 
     mensaje = fs. readFileSync(archivo, 'utf8');
@@ -50,29 +53,32 @@ app.post("/cifrar", (req, res) => {
     console.log("El mensaje encriptado es: "); 
     console.log(encriptar); 
     console.log("");
-       let desencriptar = crypto.DES. decrypt(encriptar, inputPassword);
-       console.log("El mensaje desencriptado es: "); 
-       console.log(desencriptar.toString(crypto.enc.Utf8)); 
-       console.log("");
+      
+       fs.writeFileSync(__dirname + '/uploads/' +Contenido, ""+encriptar);
+
        res.download(__dirname + '/uploads/' +Contenido);
+             
             
 
 });
 app.post("/descifrar", (req, res) => {
-    let formulario = document.getElementById("formulario");
-    
+    let Contenido = req.files.subir_archivo.name;
+  let inputPassword;
+   inputPassword = req.body.Password;
+  
     let archivo, mensaje;
-    archivo = "prueba.txt"; 
+    archivo = __dirname + '/uploads/' +Contenido; 
     mensaje = fs. readFileSync(archivo, 'utf8');
     console.log("El contenido del txt es: "); 
     console.log(mensaje); 
     console.log("");
-    let desencriptar = crypto.DES. decrypt(encriptar, "Secret Passphrase");
+    let desencriptar = crypto.DES. decrypt(mensaje, inputPassword);
     console.log("El mensaje desencriptado es: "); 
     console.log(desencriptar.toString(crypto.enc.Utf8)); 
     console.log("");
-    res.sendFile()
+    fs.writeFileSync(__dirname + '/uploads/' +Contenido, ""+desencriptar.toString(crypto.enc.Utf8));
 
+    res.download(__dirname + '/uploads/' +Contenido);
 });
 
 
