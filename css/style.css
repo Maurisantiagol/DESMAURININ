@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+body{
+    margin-bottom: 3rem;
+    display: flex;
+    background-color: #5bc0be;
+    font-family: 'Roboto Slab';
+    color: black;
+}
+
+h2, h1{
+    color: white;
+    font-family: 'Roboto Slab';
+}
+
+.box-upload{
+    font-size: 16px;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    width: 40%;
+    outline: none;
+}
+
+::-webkit-file-upload-button{
+    color: white;
+    background: #0b132b;
+    padding: 10px;
+    border: 1px solid #0b132b;
+
+}
+
+input[type=submit]{
+    width: 30%;
+    height: 2.5rem;
+    border: 1px solid #0b132b;
+    background-color: #1c2541;
+    color: #FFFFFF;
+    font-family: 'Roboto Slab';
+    border-radius: 1rem;
+}
+
+input[type=text]{
+    background-color: #FFFFFF;
+    height: 2rem;
+    width: 40%;
+    border: 1px solid #0b132b;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #000000;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.container {
+    width:996px;
+    margin:0px auto;
+    font-size:1em;
+}
+
+/* para 980px o menos */
+@media screen and (max-width:980px) {
+    .container {
+        width:98%;
+    }
+}
+
+/* para 700px o menos */
+@media screen and (max-width:700px) {
+    aside,section {
+        float:none;
+        width:96%;
+    }
+    nav, section {
+        font-size:1.2em;
+    }
+    aside {
+        margin-top:5px;
+    }
+    nav ul {
+        float:none;
+        clear:both;
+    }
+}
+
+/* para 480px o menos */
+@media screen and (max-width:480px) {
+
+}
