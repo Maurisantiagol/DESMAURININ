@@ -1,8 +1,8 @@
 Algoritmo DES con archivos.txt
 Creado por:
-Montes de Oca Arellano Edgar
-Santiago De Luis
+Montes de Oca Arellano Edgar y
+Santiago De Luis Mauricio
 Grupo 5IV7
 Alias:
-Marinin
+Marinin y
 Santiagol
