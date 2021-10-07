@@ -11,11 +11,13 @@ const subirImagen = event => {
     .then(response => response.json())
     .then(data => {
         document.getElementById('resultado').innerHTML = 'El archivo ' + data.path + ' se ha subido correctamente.';
+        
     })
     .catch(error => {
         console.error(error);
     });
 }
+
 
 document.querySelector('#subir_archivo').addEventListener('change', event => {
     subirImagen(event);

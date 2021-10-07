@@ -24,9 +24,12 @@ class RouteManager
      *
      * @return {void}
      */
-    config ()
-    {
+    config (){
+
+       
+        
         this.router.post('/subir-archivo', this.fileController.subirArchivo);
+        
 
         this.router.use(function(req, res) {
             res.status(404).json({

@@ -2,16 +2,14 @@
 /**
  * Main file controller
  */
-class FileController
-{
+class FileController{
     /**
      * @param {Object} req Objeto request
      * @param {Object} res Objeto respuesta
      * @param {function} next Callback
      * @return {Object} res The response object
      */
-    subirArchivo = async (req, res, next) =>
-    {
+    subirArchivo = async (req, res, next) =>{
         const archivo = req.files.archivo;
         const fileName = archivo.name;
         const path = __dirname + '/../uploads/' + fileName;
