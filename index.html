@@ -4,39 +4,40 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/style.css">
         <title>Cifrado DES</title>
-        <link rel="stylesheet" href="css/Style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
-        
      </head>
-    <body>  
-        <header>
-            <nav class="BarraDeNavegacion">
-                <a href="https://github.com/Maurisantiagol/DESMAURININ">Repositorio</a>
+    <body> 
+        <div class="container">
+            <h1>Cifrado DES</h1>
+            <h2>¿Qué es el cifrado DES?</h2>
+            <p>Data Encryption Standard (DES), es un algoritmo de cifrado en bloque simétrico, de longitud fija, el cual consiste de dos permutaciones, 16 vueltas en donde el mensaje de 64 bits es dividido en dos bloques de 32 bits, después de usar la primer permutación llamada P1, es cifrado 16 veces utilizando cada vez una subclave, la cual se genera 16 veces en un proceso paralelo. En el proceso para descifrar se utiliza el mismo algoritmo con las subclaves en orden inverso, dando como consecuencia, la simetría del algoritmo.</p>
+            <h2>Breve hsitoria del cifrado DES</h2>
+            <p>DES , aparece en los años 70, cuando la National Bureau of Standards , publicó una convocatoria para nuevos sistemas criptográficos. DES se convirtió en el estándar federal, para las comunicaciones seguras en los EE.UU. Desde la aparición del algoritmo DES, se ha sometido a pruebas que realiza la National Institute of Standards and Technology , cada cuatro años, con el propósito de mantener o retirarle como estándar, DES ha sufrido serias criticas en cuanto a su fiabilidad por contar con una clave de 64 bits, siendo 56 bits los que se utilizan para obtener las 16 subclaves. En el año de 1998 se realizo un reto, con el propósito de romper el algoritmo DES, lo cual se logro.</p>
+            <p>Hoy en día, DES se considera inseguro porque principalmente el tamaño de clave de 56 bits es corto. Existen también resultados analíticos que demuestran debilidades teóricas en su cifrado, aunque son inviables en la práctica.</p>
+            <h1>Cifra tus propios archivos .txt por el algoritmo DES</h1>
+            <div id="overview"> 
+                <form id="formulario" method="POST" encType="multipart/form-data">
+                    <h2>!Selecciona un nuevo archivo para cifrar/descifrar!</h2>
+                    <input type="file" id="subir_archivo" name="subir_archivo" class="box-upload" />
+                    <h2>Clave para cifrar/descifrar</h2>
+                    <input type="text" id="Password" name="Password"/>
+                    <div id="resultado"></div>
+                    <br>
+                    <input type="submit" onclick="Cifrado(event)" value="Cifrar">
+                    <input type="submit" onclick="Decifrado(event)" value="Descifrar">
+                </form>
+            </div>
+            <footer>
+                <h3>Creado por el dúo dinámico</h3>
+                <p>Montes de Oca Arellano Edgar</p>
+                <p>Santiago De Luis Mauricio</p>
+                <a href="https://github.com/Maurisantiagol/DESMAURININ">Repositorio de GitHub</a>
+            </footer>
+        </div>
+            <script src="app.js"></script>
+            <script type="text/javascript" src="resources/js/scripts.js"></script>
 
-                <a href="index.html">Cifrado DES</a>
-                
-            </nav>
-            <section class="Header"><h1>Cifrado DES</h1></section>
-        </header>
-        <div class="Contenedor">
-            <div class="datos">
-                <article class="datos_1">
-        <form id="formulario" method="POST" encType="multipart/form-data">
-        <h1>Cifrado DES</h1>
-        <p><label>Selecciona un nuevo archivo!</label></p>
-        <input type="file" id="subir_archivo" name="subir_archivo" />
-        <input type="text" id="Password" name="Password"/>
-        <div id="resultado"></div>
-        <input type="submit" onclick="Cifrado(event)" value="Cifrar">
-        <input type="submit" onclick="Decifrado(event)" value="Descifrar">
-
-        </form>
-    </aside>
-</div></div>
-        <script src="app.js"></script>
-        <script type="text/javascript" src="resources/js/scripts.js"></script>
+        
     </body>
 </html>
