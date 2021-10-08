@@ -21,7 +21,8 @@
                     <h2>!Selecciona un nuevo archivo para cifrar/descifrar!</h2>
                     <input type="file" id="subir_archivo" name="subir_archivo" class="box-upload" />
                     <h2>Clave para cifrar/descifrar</h2>
-                    <input type="text" id="Password" name="Password"/>
+                    <input type="text" id="Password" name="Password" maxlength="8"
+                    placeholder="Ingrese la contraseña para cifrar" onpaste="return false;" ondrop="return false;" minlength="8"/>
                     <div id="resultado"></div>
                     <br>
                     <input type="submit" onclick="Cifrado(event)" value="Cifrar">

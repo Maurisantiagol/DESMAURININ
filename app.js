@@ -1,15 +1,31 @@
 let formulario = document.getElementById("formulario");
 
 function Cifrado(event){
-    
-    formulario.setAttribute("action", "/cifrar");
+    var Password = formulario.Password.value.length;
 
+    if (Password==8) {
+        formulario.setAttribute("action", "/cifrar");
+
+      }else{
+    alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
+    formulario.setAttribute("action", "/index");
+
+      }
 }
 function Decifrado(event){
-    
-    formulario.setAttribute("action", "/descifrar");
+    var Password = formulario.Password.value.length;
+
+    if (Password ==8) {
+        formulario.setAttribute("action", "/descifrar");
+    }else{
+    alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
+    formulario.setAttribute("action", "/index");
+
+      }
 
 }
+
+    
 
 
 
